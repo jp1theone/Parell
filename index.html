@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Zapatillas - Siempre a la Ofensiva</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="themeCheckbox">
+            <input type="checkbox" id="themeCheckbox" />
+            <div class="slider round">
+                <span class="icon sun">☀️</span>
+                <span class="icon moon">🌙</span>
+            </div>
+        </label>
+    </div>
+
+    <header>
+        <h1>SIEMPRE A LA OFENSIVA</h1>
+        <h2>Define Tu Camino.</h2> 
+    </header>
+    
+    <section class="fullscreen-carousel" id="fullscreenCarousel">
+        <button class="carousel-nav carousel-prev" onclick="prevSlide()">❮</button>
+        <button class="carousel-nav carousel-next" onclick="nextSlide()">❯</button>
+        <div class="carousel-dots" id="carouselDots"></div>
+    </section>
+    
+    <div class="filters">
+        <div class="gender-filter">
+            <button class="active" onclick="filterGender('men')">Zapatillas Masculinas</button>
+            <button onclick="filterGender('women')">Zapatillas Femeninas</button>
+        </div>
+        
+        <div class="models-carousel">
+            <h3 class="models-title" id="modelsTitle">MODELOS DESTACADOS - HOMBRE</h3>
+            <div class="models-container">
+                <button class="model-nav model-prev" onclick="prevModel()">❮</button>
+                <div class="models-slide" id="modelsSlide">
+                    </div>
+                <button class="model-nav model-next" onclick="nextModel()">❯</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="catalog" id="shoeCatalog">
+        </div>
+    
+    <div class="pagination">
+        <button onclick="prevPage()">&larr; Anterior</button>
+        <button onclick="nextPage()">Siguiente &rarr;</button>
+    </div>
+
+    <div class="product-popup" id="productPopup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h3 class="popup-title">Detalles del producto</h3>
+                <button class="close-popup" onclick="closePopup()">&times;</button>
+            </div>
+            <div class="popup-body" id="popupBody">
+                </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
